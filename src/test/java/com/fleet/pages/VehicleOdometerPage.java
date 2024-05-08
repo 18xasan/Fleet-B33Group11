@@ -12,7 +12,7 @@ public class VehicleOdometerPage  extends BasePage{
 public VehicleOdometerPage(){
     PageFactory.initElements(Driver.getDriver(), this);
 }
-//(//span[@class='title title-level-1'])[2]
+
 @FindBy(xpath = "(//a[@class='unclickable'])[2]")
     public WebElement fleetModule;
 
@@ -20,7 +20,7 @@ public VehicleOdometerPage(){
 @FindBy(xpath = "//span[text()='Vehicle Odometer']")
     public WebElement vehicleOdometerOption;
 
-@FindBy(xpath = "(//div[@class='message'])[2]")
+@FindBy(xpath = "//div[text()='You do not have permission to perform this action.']")
 public WebElement errorMsg;
 
 @FindBy(xpath = "//input[@type='number']")
