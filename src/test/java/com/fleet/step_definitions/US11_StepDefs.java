@@ -2,6 +2,7 @@ package com.fleet.step_definitions;
 
 import com.fleet.pages.LoginPage;
 import com.fleet.pages.VehicleOdometerPage;
+import com.fleet.utilities.BrowserUtils;
 import com.fleet.utilities.Driver;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
@@ -16,10 +17,12 @@ public class US11_StepDefs {
     Actions actions = new Actions(Driver.getDriver());
 
     @When("user clicks Vehicle Odometer option from the Fleet module")
-    public void user_clicks_vehicle_odometer_option_from_the_fleet_module() {
+    public void user_clicks_vehicle_odometer_option_from_the_fleet_module() throws InterruptedException {
 
         actions.moveToElement(vehicleOdometerPage.fleetModule).perform();
+        BrowserUtils.sleep(4);
         actions.moveToElement(vehicleOdometerPage.vehicleOdometerOption).click().perform();
+        BrowserUtils.sleep(4);
 
 
     }

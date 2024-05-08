@@ -12,12 +12,12 @@ public class VehicleOdometerPage  extends BasePage{
 public VehicleOdometerPage(){
     PageFactory.initElements(Driver.getDriver(), this);
 }
-
-@FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
+//(//span[@class='title title-level-1'])[2]
+@FindBy(xpath = "(//a[@class='unclickable'])[2]")
     public WebElement fleetModule;
 
 
-@FindBy(xpath = "(//div[@class='dropdown-menu-wrapper dropdown-menu-wrapper__placeholder'])[2]//li[4]")
+@FindBy(xpath = "//span[text()='Vehicle Odometer']")
     public WebElement vehicleOdometerOption;
 
 @FindBy(xpath = "(//div[@class='message'])[2]")
