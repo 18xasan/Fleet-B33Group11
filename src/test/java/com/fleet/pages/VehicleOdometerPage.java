@@ -29,7 +29,7 @@ public WebElement errorMsg;
 @FindBy(xpath = "//button[@class='btn dropdown-toggle ']")
     public WebElement view_per_page_dropdown;
 
-@FindBy(xpath = "//span[@class='title title-level-1']")
+@FindBy(name = "unclickable")
     public WebElement fleet_module_as_a_driver;
 
 @FindBy(xpath = "//span[text()='Vehicle Odometer']")

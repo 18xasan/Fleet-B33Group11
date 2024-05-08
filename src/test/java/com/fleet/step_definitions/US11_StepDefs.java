@@ -21,7 +21,7 @@ public class US11_StepDefs {
 
         actions.moveToElement(vehicleOdometerPage.fleetModule).perform();
         BrowserUtils.sleep(4);
-        actions.moveToElement(vehicleOdometerPage.vehicleOdometerOption).click().perform();
+        actions.moveToElement(vehicleOdometerPage.vehicleOdometerOption).click();
         BrowserUtils.sleep(4);
 
 
