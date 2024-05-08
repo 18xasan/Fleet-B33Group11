@@ -6,7 +6,7 @@ Feature: Vehicles Odometers page verification
 	Scenario: Verify Vehicle Odometer module functionality for 2 users
 
 		Given the user is on the login page
-		When user successfully logged in as a "sales manager"
+		Given the user logged in as "sales manager"
 		And user clicks Vehicle Odometer option from the Fleet module
 		Then user should see expected error message on the page	
 
@@ -15,8 +15,7 @@ Feature: Vehicles Odometers page verification
 	Scenario Outline: Verify Vehicle Odometer module functionality for 1 user
 
 		Given the user is on the login page
-		When user enters valid "<username>" and "<password>"
-		And user is able to login
+		When user is successfully logged in with valid "<username>" and "<password>"
 		And user clicks Vehicle Odometer option from the Fleet module
 		Then user is directed to Vehicles Odometers page and sees the default page as "1".
 		
@@ -32,7 +31,7 @@ Feature: Vehicles Odometers page verification
 	 Scenario: Verify the View Per Page as a driver user.
 
 		Given the user is on the login page
-		When user successfully logged in as a "driver"
+	    Given the user logged in as "<userType>"
 		And user clicks Vehicle Odometer option from the Fleet module
 		Then user is directed to Vehicles Odometers page
 	    And user sees the View Per Page as "25" by default.
