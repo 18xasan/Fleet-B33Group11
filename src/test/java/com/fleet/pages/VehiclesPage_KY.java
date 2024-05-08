@@ -11,9 +11,22 @@ public class VehiclesPage_KY {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "*[@id=\"main-menu\"]/ul/li[1]/div/div/ul/li[3]/a/span")
+
+    @FindBy(className = "unclickable")
+    public WebElement fleetHoverOver;
+
+    @FindBy(xpath = "(//a/span)[2]")
     public WebElement vehicles;
 
-    @FindBy(linkText = "...")
-    public WebElement threeDots;
+    @FindBy(xpath = "(//td/div/div/a)[1]")
+    public WebElement threeDotsHoverOver;
+
+    @FindBy(xpath = "(//a[@title='Edit'])[1]")
+    public WebElement editIcon;
+
+    @FindBy(xpath = "(//a[@title='View'])[1]")
+    public WebElement viewIcon;
+
+    @FindBy(xpath = "(//a[@title='Delete'])[1]")
+    public WebElement deleteIcon;
 }
