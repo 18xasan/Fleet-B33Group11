@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class VehicleOdometerPage  extends BasePage{
 
 public VehicleOdometerPage(){
@@ -16,6 +18,8 @@ public VehicleOdometerPage(){
 @FindBy(xpath = "(//a[@class='unclickable'])[2]")
     public WebElement fleetModule;
 
+@FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-level-1 menu menu-level-1']")
+public List <WebElement> fleet_dropdown;
 
 @FindBy(xpath = "//span[text()='Vehicle Odometer']")
     public WebElement vehicleOdometerOption;
@@ -29,7 +33,7 @@ public WebElement errorMsg;
 @FindBy(xpath = "//button[@class='btn dropdown-toggle ']")
     public WebElement view_per_page_dropdown;
 
-@FindBy(name = "unclickable")
+@FindBy(className = "unclickable")
     public WebElement fleet_module_as_a_driver;
 
 @FindBy(xpath = "//span[text()='Vehicle Odometer']")
