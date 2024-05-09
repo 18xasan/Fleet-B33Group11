@@ -1,25 +1,42 @@
-Feature: Filter management on Marketing page
+@wip
+Feature: Marketing Filter Management
 
-  As a user,
-  I want to manage filters on the Marketing page,
-  So I can focus on the data related to my needs
+  As a user
+  I want to manage filters on the Marketing page
+  So that the visibility and accessibility of contents can be controlled
 
 
-  Scenario: Verification of default filter options for Store and Sales managers
-    Given I am a Store or Sales manager
-    When I navigate to the Marketing page
-    Then I should see all 5 filter options as checked by default
-
-  Scenario Outline: Verification of checkbox functionality
-    Given I am a user on the Marketing page
-    And I see the 5 filter options
-    When I uncheck the <number> boxes
-    Then the <number> boxes should be unchecked
-
+  Scenario Outline: Default filter options for Sales managers and store manager
+    Given the user is logged as a "<userType>"
+    When the user clicks the Marketing button
+    When the user clicks the Campaigns button
+    And the user clicks the small Marketing button
+    Then all filter options should be checked by default
+    When the user tries to uncheck any filter box
+    Then the system should allow unchecking any amount of boxes
     Examples:
-      | number |
-      | 1 |
-      | 2 |
-      | 3 |
-      | 4 |
-      | 5 |
+      | userType      |
+      | Sales Manager |
+      | Store Manager |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
