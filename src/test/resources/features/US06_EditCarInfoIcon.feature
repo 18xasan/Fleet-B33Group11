@@ -1,4 +1,4 @@
-@Khasan
+@B33G11-125
 Feature: Edit Car Info Icons Display on Vehicles Page
 
   As a user,

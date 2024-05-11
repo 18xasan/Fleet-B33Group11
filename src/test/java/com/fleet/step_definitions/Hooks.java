@@ -1,8 +1,5 @@
 package com.fleet.step_definitions;
 
-
-
-
 import com.fleet.utilities.BrowserUtils;
 import com.fleet.utilities.ConfigurationReader;
 import com.fleet.utilities.Driver;
@@ -11,7 +8,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
 import java.time.Duration;
 
 /*
@@ -46,8 +42,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
-
-
 
         BrowserUtils.sleep(2);
         Driver.closeDriver();
