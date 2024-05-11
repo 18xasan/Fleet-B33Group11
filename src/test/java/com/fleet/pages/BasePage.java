@@ -27,10 +27,10 @@ public abstract class BasePage {
     protected WebElement loaderMask;
 
     @FindBy(css = "h1[class='oro-subtitle']")
-    public WebElement pageSubTitle;
+    public WebElement pageSubTitle; // Quick Launchpad
 
     @FindBy(css = "#user-menu > a")
-    public WebElement userName;
+    public WebElement userName; // John Doe
 
     @FindBy(linkText = "Logout")
     public WebElement logOutLink;
@@ -56,7 +56,7 @@ public abstract class BasePage {
 
     /**
      * Waits until loader screen present. If loader screen will not pop up at all,
-     * NoSuchElementException will be handled  bu try/catch block
+     * NoSuchElementException will be handled  by try/catch block
      * Thus, we can continue in any case.
      */
     public void waitUntilLoaderScreenDisappear() {
@@ -76,8 +76,8 @@ public abstract class BasePage {
      * For example: if tab is equals to Activities, and module equals to Calls,
      * Then method will navigate user to this page: http://qa2.vytrack.com/call/
      *
-     * @param tab
-     * @param module
+     * @param tab  // Fleet     Customers     Activities     System
+     * @param module // each module under tab (example: under the Fleet tab we can see Vehicles, Vehicle Odometer, Vehicle Costs and etc.)
      */
     public void navigateToModule(String tab, String module) {
         String tabLocator = "//span[normalize-space()='" + tab + "' and contains(@class, 'title title-level-1')]";
