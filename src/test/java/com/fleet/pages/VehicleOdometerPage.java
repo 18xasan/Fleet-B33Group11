@@ -15,7 +15,7 @@ public VehicleOdometerPage(){
     PageFactory.initElements(Driver.getDriver(), this);
 }
 
-@FindBy(xpath = "(//a[@class='unclickable'])[2]")
+@FindBy(xpath = "//li[@class='dropdown dropdown-level-1']")
     public WebElement fleetModule;
 
 @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-level-1 menu menu-level-1']")

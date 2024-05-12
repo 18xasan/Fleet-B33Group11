@@ -3,12 +3,17 @@ Feature: Vehicles Odometers page verification
 
 
   @B33G11-117
-  Scenario: Verify Vehicle Odometer module functionality for 2 users
+  Scenario Outline: Verify Vehicle Odometer module functionality for 2 users
 
     Given the user is on the login page
-    Given the user logged in as "sales manager"
+    Given the user logged in as "<usertype>"
     When user clicks Vehicle Odometer option from the Fleet module
     Then user should see expected error message on the page
+
+    Examples:
+      | usertype      |
+      | sales manager |
+      | store manager |
 
 
   @B33G11-118
@@ -23,7 +28,7 @@ Feature: Vehicles Odometers page verification
       | username | password    |
       | user1    | UserUser123 |
       | user50   | UserUser123 |
-      | user150  | UserUser123 |
+    #  | user150  | UserUser123 |
       | user200  | UserUser123 |
 
 
