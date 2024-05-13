@@ -1,34 +1,51 @@
 package com.fleet.pages;
 
 
-import com.fleet.utilities.Driver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-    public LoginPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
+    private final WebDriver driver;
+
+    // Locators
+    private final By usernameInput = By.id("username");
+    private final By passwordInput = By.id("password");
+    private final By loginButton = By.id("loginBtn");
+
+    // Constructor
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
     }
 
-    @FindBy(id="prependedInput")
-    public WebElement userName;
-
-
-
-    @FindBy(id="prependedInput2")
-    public WebElement password;
-
-    @FindBy(name = "_submit")
-    public WebElement submit;
-
-
-    public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
-        submit.click();
-        // verification that we logged
+    // Actions
+    public void enterUsername(String username) {
+        driver.findElement(usernameInput).sendKeys(username);
     }
 
+    public void enterPassword(String password) {
+        driver.findElement(passwordInput).sendKeys(password);
+    }
+
+    public void clickLoginButton() {
+        driver.findElement(loginButton).click();
+    }
+
+    public void loginAsStoreManager() {
+        enterUsername("storemanager51");
+        enterPassword("UserUser123");
+        clickLoginButton();
+    }
+
+    public void loginAsSalesManager() {
+        enterUsername("salesmanager101");
+        enterPassword("UserUser123");
+        clickLoginButton();
+    }
+
+    public void loginAsTruckDriver() {
+        enterUsername("user1");
+        enterPassword("UserUser123");
+        clickLoginButton();
+    }
 }
