@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class VehiclePage_JSN extends BasePage{
 
     public VehiclePage_JSN(){
@@ -19,6 +21,9 @@ public class VehiclePage_JSN extends BasePage{
 
     @FindBy(xpath = "//a[text()='All']")
     public WebElement allButton;
+
+    @FindBy(xpath = "//input[@tabindex='-1']")
+    public List<WebElement> checkboxes;
 
 
 
