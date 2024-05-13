@@ -16,4 +16,6 @@ public class VehiclesPage_KY {
 
     @FindBy(linkText = "...")
     public WebElement threeDots;
+
+
 }
