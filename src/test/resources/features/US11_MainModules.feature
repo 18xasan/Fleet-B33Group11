@@ -1,11 +1,12 @@
 @B33G11-120 @wip
 Feature: Vehicles Odometers page verification
 
+  Background:
+    Given the user is on the login page
 
   @B33G11-117
   Scenario Outline: Verify Vehicle Odometer module functionality for 2 users
 
-    Given the user is on the login page
     Given the user logged in as "<usertype>"
     When user clicks Vehicle Odometer option from the Fleet module
     Then user should see expected error message on the page
@@ -19,7 +20,6 @@ Feature: Vehicles Odometers page verification
   @B33G11-118
   Scenario Outline: Verify Vehicle Odometer module functionality for 1 user
 
-    Given the user is on the login page
     When user is successfully logged in with valid "<username>" and "<password>"
     And user clicks Vehicle Odometer option from the Fleet module
     Then user is directed to Vehicles Odometers page and sees the default page as "1".
@@ -35,7 +35,6 @@ Feature: Vehicles Odometers page verification
   @B33G11-119
   Scenario: Verify the View Per Page as a driver user.
 
-    Given the user is on the login page
     Given the user logged in as "driver"
     When user navigates to Fleet module
     Then user is able to see the below dropdown options

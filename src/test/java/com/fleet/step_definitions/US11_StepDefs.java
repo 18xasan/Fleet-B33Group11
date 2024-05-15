@@ -88,7 +88,7 @@ public class US11_StepDefs {
        }
         System.out.println("dropdownOptions = " + dropdownOptions);
         System.out.print("actual = " + actual);
-      //  Assert.assertEquals(dropdownOptions, actual);
+       Assert.assertEquals(dropdownOptions, actual);
 
 
     }
