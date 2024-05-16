@@ -3,6 +3,7 @@ package com.fleet.step_definitions;
 
 import com.fleet.pages.DashboardPage_LI;
 import com.fleet.utilities.BrowserUtils;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -11,11 +12,18 @@ import io.cucumber.java.en.When;
 public class US02_OroincDocumentationPage_StepDefs {
 
     DashboardPage_LI dashboardPageLi = new DashboardPage_LI();
+    LoginStepDefs loginStepDefs = new LoginStepDefs();
+
+    @Given("User is logged in as {string}")
+    public void userIsLoggedInAs(String userType) {
+
+        loginStepDefs.the_user_logged_in_as(userType);
+
+        BrowserUtils.waitFor(2);
+    }
 
     @When("User must click on the question mark icon")
     public void userMustClickOnTheQuestionMarkIcon() {
-
-        BrowserUtils.waitFor(2);
 
         dashboardPageLi.clickQuestionMarkIcon();
 
