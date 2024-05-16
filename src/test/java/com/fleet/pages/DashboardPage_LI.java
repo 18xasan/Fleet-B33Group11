@@ -11,11 +11,11 @@ public class DashboardPage_LI {
     }
 
     @FindBy (xpath = "//a[@class='help no-hash']")
-    public WebElement getHelpButton;
+    public WebElement questionMarkIcon;
 
 
-    public void clickGetHelpButton () {
-        getHelpButton.click();
+    public void clickQuestionMarkIcon () {
+        questionMarkIcon.click();
     }
 
 }
