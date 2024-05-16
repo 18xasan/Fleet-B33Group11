@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class US07_VehicleSelection_StepDef {
@@ -39,14 +40,14 @@ public class US07_VehicleSelection_StepDef {
         vehiclePageJsn.masterCheckbox.click();
     }
 
+    @When("the user should be able to select a specific car")
+    public void theUserShouldBeAbleToSelectASpecificCar(){
+        BrowserUtils.sleep(2);
+        for (WebElement checkbox : vehiclePageJsn.checkboxes) {
+            checkbox.click();
+            Assert.assertTrue(checkbox.isSelected());
+        }
+    }
 
-//    @When("the user should be able to select a specific car")
-//    public void theUserShouldBeAbleToSelectASpecificCar() {
-//        BrowserUtils.sleep(2);
-//        actions.click(vehiclePageJsn.masterCheckboxArrow);
-//        BrowserUtils.sleep(2);
-//       actions.click(vehiclePageJsn.allButton);
-//        BrowserUtils.sleep(2);
-//        Assert.assertTrue(vehiclePageJsn.masterCheckbox.isSelected());
-//    }
+
 }

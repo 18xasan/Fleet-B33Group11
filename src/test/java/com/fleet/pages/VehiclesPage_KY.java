@@ -29,4 +29,9 @@ public class VehiclesPage_KY {
 
     @FindBy(xpath = "(//a[@title='Delete'])[1]")
     public WebElement deleteIcon;
+  
+    @FindBy(linkText = "...")
+    public WebElement threeDots;
+
+
 }
