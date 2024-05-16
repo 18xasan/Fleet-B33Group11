@@ -52,10 +52,12 @@ public class US11_StepDefs {
 
     @Then("user is directed to Vehicles Odometers page and sees the default page as {string}.")
     public void userIsDirectedToVehiclesOdometersPageAndSeesTheDefaultPageAs(String defaultPageValue) {
-        actions.moveToElement(vehicleOdometerPage.fleet_module_as_a_driver).perform();
-        vehicleOdometerPage.vehicle_odometer_as_a_driver.click();
+//        actions.moveToElement(vehicleOdometerPage.fleet_module_as_a_driver).perform();
+//        vehicleOdometerPage.vehicle_odometer_as_a_driver.click();
+        vehicleOdometerPage.navigateToModule("Fleet","Vehicle Odometer");
         System.out.println("vehicleOdometerPage.pageField.getAttribute(\"value\") = " + vehicleOdometerPage.pageField.getAttribute("value"));
         Assert.assertEquals(defaultPageValue, vehicleOdometerPage.pageField.getAttribute("value"));
+
 
     }
 
