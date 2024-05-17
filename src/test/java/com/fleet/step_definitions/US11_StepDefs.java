@@ -82,7 +82,7 @@ public class US11_StepDefs {
 
     }
 
-    @Then("user is able to see the below dropdown options")
+    @Then("user is able to see the below options")
     public void user_is_able_to_see_the_below_dropdown_options(List<String> dropdownOptions) {
        List<String> actual = new ArrayList<>();
        for (WebElement option : vehicleOdometerPage.fleet_dropdown) {
@@ -97,7 +97,7 @@ public class US11_StepDefs {
 
 
 
-    @When("user clicks Vehicle Odometers option")
+    @When("user clicks on Vehicle Odometers option")
     public void userClicksVehicleOdometersOption() {
         actions.moveToElement(vehicleOdometerPage.vehicle_odometer_as_a_driver).perform();
         vehicleOdometerPage.vehicle_odometer_as_a_driver.click();

@@ -37,7 +37,7 @@ Feature: Vehicles Odometers page verification
 
     Given the user logged in as "driver"
     When user navigates to Fleet module
-    Then user is able to see the below dropdown options
+    Then user is able to see the below options
       | Vehicles              |
       | Vehicle Odometer      |
       | Vehicle Costs         |
@@ -45,5 +45,5 @@ Feature: Vehicles Odometers page verification
       | Vehicles Fuel Logs    |
       | Vehicle Services Logs |
       | Vehicles Model        |
-    When user clicks Vehicle Odometers option
+    When user clicks on Vehicle Odometers option
     Then user sees the View Per Page as "25" on the Vehicle Odometer page.
