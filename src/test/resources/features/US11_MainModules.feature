@@ -28,7 +28,7 @@ Feature: Vehicles Odometers page verification
       | username | password    |
       | user1    | UserUser123 |
       | user50   | UserUser123 |
-    #  | user150  | UserUser123 |
+      | user150  | UserUser123 |
       | user200  | UserUser123 |
 
 
