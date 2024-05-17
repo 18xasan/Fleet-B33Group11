@@ -7,6 +7,7 @@ import com.fleet.utilities.BrowserUtils;
 import com.fleet.utilities.Driver;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -44,7 +45,7 @@ public class US11_StepDefs {
 
     LoginPage loginPage = new LoginPage();
 
-    @When("user is successfully logged in with valid {string} and {string}")
+    @Given("user is successfully logged in with valid {string} and {string}")
     public void userIsSuccessfullyLoggedInWithValidAnd(String username, String password) {
         loginPage.login(username, password);
 

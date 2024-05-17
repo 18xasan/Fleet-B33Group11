@@ -20,8 +20,8 @@ Feature: Vehicles Odometers page verification
   @B33G11-118
   Scenario Outline: Verify Vehicle Odometer module functionality for 1 user
 
-    When user is successfully logged in with valid "<username>" and "<password>"
-    And user clicks Vehicle Odometer option from the Fleet module
+    Given user is successfully logged in with valid "<username>" and "<password>"
+    When user clicks Vehicle Odometer option from the Fleet module
     Then user is directed to Vehicles Odometers page and sees the default page as "1".
 
     Examples:
