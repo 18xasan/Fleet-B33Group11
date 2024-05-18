@@ -18,7 +18,7 @@ public class US06_EditCarInfoIconStepDefinitions extends BasePage {
     Actions actions = new Actions(Driver.getDriver());
 
 
-    @Given("^I am on the Vehicles page$")
+    @Given("I am on the Vehicles page")
     public void i_am_on_the_Vehicles_page() {
         loginStepDefs.the_user_logged_in_as("driver");
         // BrowserUtils.sleep(2);
@@ -33,8 +33,8 @@ public class US06_EditCarInfoIconStepDefinitions extends BasePage {
 
     }
 
-    @When("^I hover the mouse over the three dots \"([^\"]*)\"$")
-    public void i_hover_the_mouse_over_the_three_dots(String threeDots) {
+    @When("I hover the mouse over the three dots \"...\"")
+    public void i_hover_the_mouse_over_the_three_dots() {
         BrowserUtils.sleep(3);
 
         actions.moveToElement(vehiclesPageKy.threeDotsHoverOver).perform();
@@ -43,8 +43,8 @@ public class US06_EditCarInfoIconStepDefinitions extends BasePage {
 
     }
 
-    @Then("^I should see the options \"([^\"]*)\"$")
-    public void i_should_see_the_options(String options) {
+    @Then("I should see the options \"view, edit, delete\"")
+    public void i_should_see_the_options() {
         Assert.assertTrue("editIcon is NOT displayed", vehiclesPageKy.editIcon.isDisplayed());
         Assert.assertTrue("editIcon is NOT enabled", vehiclesPageKy.editIcon.isEnabled());
         Assert.assertTrue("viewIcon is NOT displayed", vehiclesPageKy.viewIcon.isDisplayed());
