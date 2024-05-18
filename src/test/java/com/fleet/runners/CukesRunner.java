@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/fleet/step_definitions",
-        dryRun = true,
+        dryRun = false,
         tags = "@B33G11-133",
         publish = true
 )
