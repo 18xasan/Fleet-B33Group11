@@ -1,14 +1,13 @@
-Feature: Error Messages for Invalid Integer Input in Calendar Repeat Every
+Feature: Default
 
-  As a user, I should see error messages when I enter an invalid integer number into the calendar Repeat Every input box.
 
-  Scenario: Display error message for entering invalid integer values
+  @B33G11-121
+  Scenario Outline: Verify that users see error messages when enter invalid integers.
     Given the user is on the calendar page
-    When the user enters an invalid integer into the Repeat Every input box
-    Then the user should see the corresponding error message
-      | Entered Value | Expected Error Message                        |
-      | -1            | "The value should not be less than 1."        |
-      | 100           | "The value should not be more than 99."       |
+    When the user enters an "<invalid integer>" into the Repeat Every input box
+    Then the user should see the "<error message>"
 
-
-
+    Examples:
+      | invalid integer | error message                          |
+      | -1              | The value have not to be less than 1.  |
+      | 100             | The value have not to be more than 99. |
