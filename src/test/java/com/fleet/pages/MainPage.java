@@ -4,54 +4,51 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class MainPage {
+    private WebDriver driver;
 
-    private final WebDriver driver;
-
-
-    private final By dashboardLink = By.xpath("//a[contains(text(),'Dashboards')]");
-    private final By fleetLink = By.xpath("//a[contains(text(),'Fleet')]");
-    private final By customersLink = By.xpath("//a[contains(text(),'Customers')]");
-    private final By salesLink = By.xpath("//a[contains(text(),'Sales')]");
-    private final By activitiesLink = By.xpath("//a[contains(text(),'Activities')]");
-    private final By marketingLink = By.xpath("//a[contains(text(),'Marketing')]");
-    private final By reportsSegmentsLink = By.xpath("//a[contains(text(),'Reports & Segments')]");
-    private final By systemLink = By.xpath("//a[contains(text(),'System')]");
-
+    // Locators for main modules
+    private By dashboardsLink = By.cssSelector("a[href='/dashboard']");
+    private By fleetLink = By.cssSelector("a[href='/fleet']");
+    private By customersLink = By.cssSelector("a[href='/customers']");
+    private By salesLink = By.cssSelector("a[href='/sales']");
+    private By activitiesLink = By.cssSelector("a[href='/activities']");
+    private By marketingLink = By.cssSelector("a[href='/marketing']");
+    private By reportsAndSegmentsLink = By.cssSelector("a[href='/reports']");
+    private By systemLink = By.cssSelector("a[href='/system']");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
 
-
-    public boolean isDashboardDisplayed() {
-        return driver.findElement(dashboardLink).isDisplayed();
+    public void goToDashboards() {
+        driver.findElement(dashboardsLink).click();
     }
 
-    public boolean isFleetDisplayed() {
-        return driver.findElement(fleetLink).isDisplayed();
+    public void goToFleet() {
+        driver.findElement(fleetLink).click();
     }
 
-    public boolean isCustomersDisplayed() {
-        return driver.findElement(customersLink).isDisplayed();
+    public void goToCustomers() {
+        driver.findElement(customersLink).click();
     }
 
-    public boolean isSalesDisplayed() {
-        return driver.findElement(salesLink).isDisplayed();
+    public void goToSales() {
+        driver.findElement(salesLink).click();
     }
 
-    public boolean isActivitiesDisplayed() {
-        return driver.findElement(activitiesLink).isDisplayed();
+    public void goToActivities() {
+        driver.findElement(activitiesLink).click();
     }
 
-    public boolean isMarketingDisplayed() {
-        return driver.findElement(marketingLink).isDisplayed();
+    public void goToMarketing() {
+        driver.findElement(marketingLink).click();
     }
 
-    public boolean isReportsSegmentsDisplayed() {
-        return driver.findElement(reportsSegmentsLink).isDisplayed();
+    public void goToReportsAndSegments() {
+        driver.findElement(reportsAndSegmentsLink).click();
     }
 
-    public boolean isSystemDisplayed() {
-        return driver.findElement(systemLink).isDisplayed();
+    public void goToSystem() {
+        driver.findElement(systemLink).click();
     }
 }

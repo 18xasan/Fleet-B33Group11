@@ -36,7 +36,7 @@ public class LoginStepDefs {
             username = "storemanager51";
             password = "UserUser123";
         }
-
+        new LoginPage().login(username,password);
     }
 
     @Given("the user logged in with username as {string} and password as {string}")

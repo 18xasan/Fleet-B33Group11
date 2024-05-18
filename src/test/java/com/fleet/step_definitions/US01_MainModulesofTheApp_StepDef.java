@@ -20,7 +20,7 @@ public class US01_MainModulesofTheApp_StepDef {
 
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
-        login("storemanager51", "100");
+        login("storemanager51", "UserUser123");
     }
 
     @Given("I am a truck driver")
@@ -29,7 +29,7 @@ public class US01_MainModulesofTheApp_StepDef {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
 
-        login("user1", "50");
+        login("user1", "UserUser123");
     }
 
     @When("I access the application")
