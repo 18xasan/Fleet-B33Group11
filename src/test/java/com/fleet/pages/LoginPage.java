@@ -3,13 +3,12 @@ package com.fleet.pages;
 
 import com.fleet.utilities.Driver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage(ChromeDriver driver){
+    public LoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -23,10 +22,6 @@ public class LoginPage {
 
     @FindBy(name = "_submit")
     public WebElement submit;
-
-    public LoginPage() {
-
-    }
 
 
     public void login(String userNameStr, String passwordStr) {
