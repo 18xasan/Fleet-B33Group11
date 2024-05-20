@@ -3,7 +3,6 @@ package com.fleet.step_definitions;
 import com.fleet.pages.LoginPage;
 import com.fleet.pages.VehicleOdometerPage;
 
-import com.fleet.utilities.BrowserUtils;
 import com.fleet.utilities.Driver;
 
 import io.cucumber.java.en.And;
